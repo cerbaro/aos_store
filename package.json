@@ -1,0 +1,20 @@
+{
+  "name": "aos_store",
+  "version": "1.0.0",
+  "description": "AOS Store eCommerce",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type" : "git", 
+    "url" : "https://github.com/cerbaro/aos_store.git"
+  },
+  "author": "Vinicius Andrei Cerbaro",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.7.6",
+    "passport": "^0.3.2",
+    "restify": "^4.3.0"
+  }
+}
