@@ -12,6 +12,7 @@ var app = restify.createServer({
     }
 });
 
+require('./routes.js')(app);
 
 
 app.listen(8000);
