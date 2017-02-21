@@ -1,0 +1,307 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Aos_store",
+		"_postman_id": "332972cd-c389-b7c8-4916-b5f46ffa8270",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"description": "",
+			"item": [
+				{
+					"name": "creating category",
+					"request": {
+						"url": "http://localhost:8000/api/category",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "TVs",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "desc",
+									"value": "Some description for TVs",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list all categories",
+					"request": {
+						"url": "http://localhost:8000/api/categories",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get category info",
+					"request": {
+						"url": "http://localhost:8000/api/category/58abc038835a95ab3f1ea703",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Updating category",
+					"request": {
+						"url": "http://localhost:8000/api/category",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"58abc038835a95ab3f1ea703\",\n\t\"category\": {\n\t\t\"name\": \"Smartphones\",\n\t\t\"desc\": \"Some description for smartphones\"\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "deleting category",
+					"request": {
+						"url": "http://localhost:8000/api/category",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "58abc1163e8347ac1c74eb6f",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"description": "",
+			"item": [
+				{
+					"name": "creating product",
+					"request": {
+						"url": "http://localhost:8000/api/product",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Nokia 5125",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "desc",
+									"value": "Comes with Snake Game",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "price",
+									"value": "679.99",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "inStock",
+									"value": "1000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "category",
+									"value": "58abc038835a95ab3f1ea703",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list all products",
+					"request": {
+						"url": "http://localhost:8000/api/products",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get product info",
+					"request": {
+						"url": "http://localhost:8000/api/product/58ac5d685331efbc93f30977",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Updating product buyers",
+					"request": {
+						"url": "http://localhost:8000/api/product",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"58ac5d685331efbc93f30977\",\n\t\"buyer\": {\n\t\t\"customer\": \"58ac5d3c5331efbc93f30975\",\n\t\t\"quantity\": 1\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "deleting product",
+					"request": {
+						"url": "http://localhost:8000/api/product",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "58ac5b18488594bc4876fef8",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "creating user",
+					"request": {
+						"url": "http://localhost:8000/api/user",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "admin",
+									"value": "0",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Uncle Ben",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "email",
+									"value": "ben@email.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "city",
+									"value": "Gainesville",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "state",
+									"value": "Florida",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "zipcode",
+									"value": "32601",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "list all users",
+					"request": {
+						"url": "http://localhost:8000/api/users",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

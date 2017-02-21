@@ -1,6 +1,5 @@
 var mongoose = require("mongoose");
 
-
 var category = new mongoose.Schema({
     
     active: Boolean,
@@ -11,4 +10,7 @@ var category = new mongoose.Schema({
 });
 
 
-exports.Category = mongoose.model('Category', category);
+
+var Category = mongoose.model('Category', category);
+
+module.exports = Category;

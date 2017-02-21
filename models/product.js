@@ -32,4 +32,6 @@ var product = new mongoose.Schema({
 });
 
 
-exports.Product = mongoose.model('Product', product);
+var Product = mongoose.model('Product', product);
+
+module.exports = Product;

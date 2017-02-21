@@ -1,19 +1,22 @@
-var restify     = require('restify'),
-    passport    = require('passport'),
-    mongoose    = require('mongoose');
+var restify  = require('restify'),
+    passport = require('passport'),
+    mongoose = require('mongoose');
+    
+    
+    
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost:27017/aos_store')
 
 
 var app = restify.createServer({
-    name: "AOS Store",
-    formatters: {
-        'application/json': function(req, res, body, callback) {
-            return callback(null, JSON.stringify(body, null, space=2));
-        }
-    }
+    name: "AOS Store"
 });
 
-require('./routes.js')(app);
+app.use(restify.CORS());
+app.use(restify.fullResponse());
+app.use(restify.bodyParser());
 
+require('./routes.js')(app);
 
 app.listen(8000);
 
